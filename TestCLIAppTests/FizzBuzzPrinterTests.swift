@@ -21,7 +21,7 @@ class FizzBuzzStringsMaker {
             if number % 3 == 0 {
                 return "Fizz"
             } else {
-                return ""
+                return "Buzz"
             }
         })
     }
@@ -45,12 +45,21 @@ class FizzBuzzPrinterTests: XCTestCase {
         XCTAssertEqual(strings, [])
     }
     
-    func test_run_forSequenceMadeByMultiplesOfThreeProducesFizzResultStrings() {
+    func test_run_forSequenceMadeByMultiplesOfThreeButNotFiveProducesFizzResultStrings() {
         var strings: [String]?
         let sut = FizzBuzzStringsMaker(numbers: [3, 6, 9, 12]) { strings = $0 }
         
         sut.run()
         
         XCTAssertEqual(strings, ["Fizz", "Fizz", "Fizz", "Fizz"])
+    }
+    
+    func test_run_forSequenceMadeByMultiplesOfFiveButNotThreeProducesBuzzResultStrings() {
+        var strings: [String]?
+        let sut = FizzBuzzStringsMaker(numbers: [5, 10, 20, 25]) { strings = $0 }
+        
+        sut.run()
+        
+        XCTAssertEqual(strings, ["Buzz", "Buzz", "Buzz", "Buzz"])
     }
 }
