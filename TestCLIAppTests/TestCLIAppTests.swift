@@ -14,10 +14,18 @@ class TestCLIApp {
     init(runnable: RunnableSpy) {
         self.runnable = runnable
     }
+    
+    func start() {
+        runnable.run()
+    }
 }
 
 final class RunnableSpy {
     var runCallsCount: Int = 0
+    
+    func run() {
+        runCallsCount += 1
+    }
 }
 
 class TestCLIAppTests: XCTestCase {
@@ -29,4 +37,12 @@ class TestCLIAppTests: XCTestCase {
         XCTAssertEqual(runnable.runCallsCount, 0)
     }
     
+    func test_start_callsRunnableRunCommandOnce() {
+        let runnable = RunnableSpy()
+        let sut = TestCLIApp(runnable: runnable)
+        
+        sut.start()
+        
+        XCTAssertEqual(runnable.runCallsCount, 1)
+    }
 }
