@@ -17,7 +17,7 @@ class FizzBuzzStringsMaker {
     }
     
     func run() {
-        completion([])
+        completion(numbers.map { String($0) })
     }
 }
 
@@ -39,4 +39,12 @@ class FizzBuzzPrinterTests: XCTestCase {
         XCTAssertEqual(strings, [])
     }
 
+    func test_run_forNumberOneProducesOneAsResult() {
+        var strings: [String]?
+        let sut = FizzBuzzStringsMaker(numbers: [1]) { strings = $0 }
+        
+        sut.run()
+        
+        XCTAssertEqual(strings, ["1"])
+    }
 }
