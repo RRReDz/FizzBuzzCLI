@@ -22,8 +22,10 @@ class FizzBuzzStringsMaker {
                 return "FizzBuzz"
             } else if number % 3 == 0 {
                 return "Fizz"
-            } else {
+            } else if number % 5 == 0 {
                 return "Buzz"
+            } else {
+                return String(number)
             }
         })
     }
@@ -72,5 +74,15 @@ class FizzBuzzPrinterTests: XCTestCase {
         sut.run()
         
         XCTAssertEqual(strings, ["FizzBuzz", "FizzBuzz", "FizzBuzz", "FizzBuzz"])
+    }
+    
+    func test_run_forSequenceMadeByNotMultiplesOfFiveOrThreeOrBothProducesRelativeNumberResultStrings() {
+        var strings: [String]?
+        let numbers = [1, 2, 4, 7, 8, 11, 13, 14, 16, 17, 19, 22, 23, 26, 28, 29]
+        let sut = FizzBuzzStringsMaker(numbers: numbers) { strings = $0 }
+        
+        sut.run()
+        
+        XCTAssertEqual(strings, numbers.map(String.init))
     }
 }
