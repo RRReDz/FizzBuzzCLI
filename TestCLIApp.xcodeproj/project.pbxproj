@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		9AFBBB2526CFC5410061ECD5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFBBB2426CFC5410061ECD5 /* main.swift */; };
-		9AFBBB3226CFC59E0061ECD5 /* TestCLIAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFBBB3126CFC59E0061ECD5 /* TestCLIAppTests.swift */; };
-		9AFBBB4426CFD80B0061ECD5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFBBB2426CFC5410061ECD5 /* main.swift */; };
 		9AFBBB4626CFE0E50061ECD5 /* FizzBuzzPrinterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFBBB4526CFE0E50061ECD5 /* FizzBuzzPrinterTests.swift */; };
-		9AFBBB4826CFF0C60061ECD5 /* TestCLIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFBBB4726CFF0C60061ECD5 /* TestCLIApp.swift */; };
 		9AFBBB4A26CFF12B0061ECD5 /* FizzBuzzStringsMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFBBB4926CFF12B0061ECD5 /* FizzBuzzStringsMaker.swift */; };
+		9AFBBB5026D0065A0061ECD5 /* FizzBuzzStringsMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFBBB4926CFF12B0061ECD5 /* FizzBuzzStringsMaker.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9AFBBB4B26D005A80061ECD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AFBBB1926CFC5410061ECD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AFBBB2026CFC5410061ECD5;
+			remoteInfo = TestCLIApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9AFBBB1F26CFC5410061ECD5 /* CopyFiles */ = {
@@ -31,10 +39,8 @@
 		9AFBBB2126CFC5410061ECD5 /* TestCLIApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestCLIApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFBBB2426CFC5410061ECD5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9AFBBB2F26CFC59E0061ECD5 /* TestCLIAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCLIAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AFBBB3126CFC59E0061ECD5 /* TestCLIAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCLIAppTests.swift; sourceTree = "<group>"; };
 		9AFBBB3326CFC59E0061ECD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AFBBB4526CFE0E50061ECD5 /* FizzBuzzPrinterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzPrinterTests.swift; sourceTree = "<group>"; };
-		9AFBBB4726CFF0C60061ECD5 /* TestCLIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCLIApp.swift; sourceTree = "<group>"; };
 		9AFBBB4926CFF12B0061ECD5 /* FizzBuzzStringsMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzStringsMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				9AFBBB2426CFC5410061ECD5 /* main.swift */,
-				9AFBBB4726CFF0C60061ECD5 /* TestCLIApp.swift */,
 				9AFBBB4926CFF12B0061ECD5 /* FizzBuzzStringsMaker.swift */,
 			);
 			path = TestCLIApp;
@@ -87,7 +92,6 @@
 		9AFBBB3026CFC59E0061ECD5 /* TestCLIAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				9AFBBB3126CFC59E0061ECD5 /* TestCLIAppTests.swift */,
 				9AFBBB4526CFE0E50061ECD5 /* FizzBuzzPrinterTests.swift */,
 				9AFBBB3326CFC59E0061ECD5 /* Info.plist */,
 			);
@@ -125,6 +129,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9AFBBB4C26D005A80061ECD5 /* PBXTargetDependency */,
 			);
 			name = TestCLIAppTests;
 			productName = TestCLIAppTests;
@@ -183,7 +188,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AFBBB4A26CFF12B0061ECD5 /* FizzBuzzStringsMaker.swift in Sources */,
-				9AFBBB4826CFF0C60061ECD5 /* TestCLIApp.swift in Sources */,
 				9AFBBB2526CFC5410061ECD5 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,13 +196,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AFBBB4426CFD80B0061ECD5 /* main.swift in Sources */,
-				9AFBBB3226CFC59E0061ECD5 /* TestCLIAppTests.swift in Sources */,
+				9AFBBB5026D0065A0061ECD5 /* FizzBuzzStringsMaker.swift in Sources */,
 				9AFBBB4626CFE0E50061ECD5 /* FizzBuzzPrinterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9AFBBB4C26D005A80061ECD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AFBBB2026CFC5410061ECD5 /* TestCLIApp */;
+			targetProxy = 9AFBBB4B26D005A80061ECD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9AFBBB2626CFC5410061ECD5 /* Debug */ = {

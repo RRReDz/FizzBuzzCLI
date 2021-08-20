@@ -14,11 +14,9 @@ let printerCompletion = { (stringResults: [String]) in
     }
 }
 
-let fizzBuzzRunnable = FizzBuzzStringsMaker(
+let fizzBuzz = FizzBuzzStringsMaker(
     numbers: zeroToOneUndredNumbers,
     completion: printerCompletion)
 
-let main = TestCLIApp(runnable: fizzBuzzRunnable)
-
-main.start()
+fizzBuzz.run()
 

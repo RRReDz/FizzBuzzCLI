@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import TestCLIApp
 
 class FizzBuzzPrinterTests: XCTestCase {
 

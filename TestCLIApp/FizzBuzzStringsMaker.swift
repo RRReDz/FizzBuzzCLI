@@ -7,16 +7,16 @@
 
 import Foundation
 
-class FizzBuzzStringsMaker: Runnable {
+public class FizzBuzzStringsMaker {
     private let completion: ([String]) -> Void
     private let numbers: [Int]
     
-    init(numbers: [Int] = [], completion: @escaping ([String]) -> Void) {
+    public init(numbers: [Int] = [], completion: @escaping ([String]) -> Void) {
         self.numbers = numbers
         self.completion = completion
     }
     
-    func run() {
+    public func run() {
         completion(numbers.map { number in
             if number % 3 == 0 && number % 5 == 0 {
                 return "FizzBuzz"
