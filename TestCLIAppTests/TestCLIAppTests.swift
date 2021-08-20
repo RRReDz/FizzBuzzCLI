@@ -9,9 +9,9 @@ import XCTest
 import TestCLIApp
 
 class TestCLIApp {
-    private let runnable: RunnableSpy
+    private let runnable: Runnable
     
-    init(runnable: RunnableSpy) {
+    init(runnable: Runnable) {
         self.runnable = runnable
     }
     
@@ -20,12 +20,8 @@ class TestCLIApp {
     }
 }
 
-final class RunnableSpy {
-    var runCallsCount: Int = 0
-    
-    func run() {
-        runCallsCount += 1
-    }
+protocol Runnable {
+    func run()
 }
 
 class TestCLIAppTests: XCTestCase {
@@ -44,5 +40,15 @@ class TestCLIAppTests: XCTestCase {
         sut.start()
         
         XCTAssertEqual(runnable.runCallsCount, 1)
+    }
+    
+    //MARK: Utils
+    
+    private final class RunnableSpy: Runnable {
+        var runCallsCount: Int = 0
+        
+        func run() {
+            runCallsCount += 1
+        }
     }
 }
