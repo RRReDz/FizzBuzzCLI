@@ -9,9 +9,15 @@ import XCTest
 
 class FizzBuzzStringsMaker {
     private let completion: ([String]) -> Void
+    private let numbers: [Int]
     
-    init(completion: @escaping ([String]) -> Void) {
+    init(numbers: [Int] = [], completion: @escaping ([String]) -> Void) {
+        self.numbers = numbers
         self.completion = completion
+    }
+    
+    func run() {
+        completion([])
     }
 }
 
@@ -22,6 +28,15 @@ class FizzBuzzPrinterTests: XCTestCase {
         _ = FizzBuzzStringsMaker { _ in completionCallsCount += 1 }
         
         XCTAssertEqual(completionCallsCount, 0)
+    }
+    
+    func test_run_forNoNumbersProducesEmptyResult() {
+        var strings: [String]?
+        let sut = FizzBuzzStringsMaker(numbers: []) { strings = $0 }
+        
+        sut.run()
+        
+        XCTAssertEqual(strings, [])
     }
 
 }
