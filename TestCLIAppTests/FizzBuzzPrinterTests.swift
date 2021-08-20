@@ -41,39 +41,39 @@ class FizzBuzzPrinterTests: XCTestCase {
     }
     
     func test_run_forNoNumbersProducesEmptyResult() {
-        var strings: [String]?
-        let sut = FizzBuzzStringsMaker(numbers: []) { strings = $0 }
+        let sut = FizzBuzzStringsMaker(numbers: []) { XCTAssertEqual($0, []) }
         
         sut.run()
-        
-        XCTAssertEqual(strings, [])
     }
     
     func test_run_forSequenceMadeByMultiplesOfThreeButNotFiveProducesFizzResultStrings() {
-        var strings: [String]?
-        let sut = FizzBuzzStringsMaker(numbers: [3, 6, 9, 12]) { strings = $0 }
+        let numbers = [3, 6, 9, 12, 18, 21, 24, 27]
+        
+        let sut = FizzBuzzStringsMaker(numbers: numbers) { strings in
+            XCTAssertEqual(strings, [String](repeating: "Fizz", count: numbers.count))
+        }
         
         sut.run()
-        
-        XCTAssertEqual(strings, ["Fizz", "Fizz", "Fizz", "Fizz"])
     }
     
     func test_run_forSequenceMadeByMultiplesOfFiveButNotThreeProducesBuzzResultStrings() {
-        var strings: [String]?
-        let sut = FizzBuzzStringsMaker(numbers: [5, 10, 20, 25]) { strings = $0 }
+        let numbers = [5, 10, 20, 25, 35, 40, 50]
+        
+        let sut = FizzBuzzStringsMaker(numbers: numbers) { strings in
+            XCTAssertEqual(strings, [String](repeating: "Buzz", count: numbers.count))
+        }
         
         sut.run()
-        
-        XCTAssertEqual(strings, ["Buzz", "Buzz", "Buzz", "Buzz"])
     }
     
     func test_run_forSequenceMadeByMultiplesOfFiveAndThreeProducesFizzBuzzResultStrings() {
-        var strings: [String]?
-        let sut = FizzBuzzStringsMaker(numbers: [15, 30, 45, 60]) { strings = $0 }
+        let numbers = [15, 30, 45, 60, 75, 90]
+        
+        let sut = FizzBuzzStringsMaker(numbers: numbers) { strings in
+            XCTAssertEqual(strings, [String](repeating: "FizzBuzz", count: numbers.count))
+        }
         
         sut.run()
-        
-        XCTAssertEqual(strings, ["FizzBuzz", "FizzBuzz", "FizzBuzz", "FizzBuzz"])
     }
     
     func test_run_forSequenceMadeByNotMultiplesOfFiveOrThreeOrBothProducesRelativeNumberResultStrings() {
