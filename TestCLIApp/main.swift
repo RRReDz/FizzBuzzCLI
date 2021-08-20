@@ -7,26 +7,18 @@
 
 import Foundation
 
-class TestCLIApp {
-    private let runnable: Runnable
-    
-    init(runnable: Runnable) {
-        self.runnable = runnable
-    }
-    
-    func start() {
-        runnable.run()
+let zeroToOneUndredNumbers = Array(1...100)
+let printerCompletion = { (stringResults: [String]) in
+    stringResults.forEach {
+        print("\($0)")
     }
 }
 
-protocol Runnable {
-    func run()
-}
+let fizzBuzzRunnable = FizzBuzzStringsMaker(
+    numbers: zeroToOneUndredNumbers,
+    completion: printerCompletion)
 
-private final class NullRunnable: Runnable {
-    func run() {}
-}
+let main = TestCLIApp(runnable: fizzBuzzRunnable)
 
-let main = TestCLIApp(runnable: NullRunnable())
 main.start()
 
