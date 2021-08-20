@@ -18,7 +18,9 @@ class FizzBuzzStringsMaker {
     
     func run() {
         completion(numbers.map { number in
-            if number % 3 == 0 {
+            if number % 3 == 0 && number % 5 == 0 {
+                return "FizzBuzz"
+            } else if number % 3 == 0 {
                 return "Fizz"
             } else {
                 return "Buzz"
@@ -61,5 +63,14 @@ class FizzBuzzPrinterTests: XCTestCase {
         sut.run()
         
         XCTAssertEqual(strings, ["Buzz", "Buzz", "Buzz", "Buzz"])
+    }
+    
+    func test_run_forSequenceMadeByMultiplesOfFiveAndThreeProducesFizzBuzzResultStrings() {
+        var strings: [String]?
+        let sut = FizzBuzzStringsMaker(numbers: [15, 30, 45, 60]) { strings = $0 }
+        
+        sut.run()
+        
+        XCTAssertEqual(strings, ["FizzBuzz", "FizzBuzz", "FizzBuzz", "FizzBuzz"])
     }
 }
