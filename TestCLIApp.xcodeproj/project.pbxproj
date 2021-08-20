@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9AFBBB2526CFC5410061ECD5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFBBB2426CFC5410061ECD5 /* main.swift */; };
+		9AFBBB3226CFC59E0061ECD5 /* TestCLIAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFBBB3126CFC59E0061ECD5 /* TestCLIAppTests.swift */; };
+		9AFBBB4426CFD80B0061ECD5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFBBB2426CFC5410061ECD5 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +27,20 @@
 /* Begin PBXFileReference section */
 		9AFBBB2126CFC5410061ECD5 /* TestCLIApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestCLIApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFBBB2426CFC5410061ECD5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9AFBBB2F26CFC59E0061ECD5 /* TestCLIAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCLIAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AFBBB3126CFC59E0061ECD5 /* TestCLIAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCLIAppTests.swift; sourceTree = "<group>"; };
+		9AFBBB3326CFC59E0061ECD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9AFBBB1E26CFC5410061ECD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AFBBB2C26CFC59E0061ECD5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				9AFBBB2326CFC5410061ECD5 /* TestCLIApp */,
+				9AFBBB3026CFC59E0061ECD5 /* TestCLIAppTests */,
 				9AFBBB2226CFC5410061ECD5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				9AFBBB2126CFC5410061ECD5 /* TestCLIApp */,
+				9AFBBB2F26CFC59E0061ECD5 /* TestCLIAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +74,15 @@
 				9AFBBB2426CFC5410061ECD5 /* main.swift */,
 			);
 			path = TestCLIApp;
+			sourceTree = "<group>";
+		};
+		9AFBBB3026CFC59E0061ECD5 /* TestCLIAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				9AFBBB3126CFC59E0061ECD5 /* TestCLIAppTests.swift */,
+				9AFBBB3326CFC59E0061ECD5 /* Info.plist */,
+			);
+			path = TestCLIAppTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +105,23 @@
 			productReference = 9AFBBB2126CFC5410061ECD5 /* TestCLIApp */;
 			productType = "com.apple.product-type.tool";
 		};
+		9AFBBB2E26CFC59E0061ECD5 /* TestCLIAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AFBBB3426CFC59E0061ECD5 /* Build configuration list for PBXNativeTarget "TestCLIAppTests" */;
+			buildPhases = (
+				9AFBBB2B26CFC59E0061ECD5 /* Sources */,
+				9AFBBB2C26CFC59E0061ECD5 /* Frameworks */,
+				9AFBBB2D26CFC59E0061ECD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestCLIAppTests;
+			productName = TestCLIAppTests;
+			productReference = 9AFBBB2F26CFC59E0061ECD5 /* TestCLIAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +132,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					9AFBBB2026CFC5410061ECD5 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					9AFBBB2E26CFC59E0061ECD5 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -110,9 +153,20 @@
 			projectRoot = "";
 			targets = (
 				9AFBBB2026CFC5410061ECD5 /* TestCLIApp */,
+				9AFBBB2E26CFC59E0061ECD5 /* TestCLIAppTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9AFBBB2D26CFC59E0061ECD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9AFBBB1D26CFC5410061ECD5 /* Sources */ = {
@@ -120,6 +174,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AFBBB2526CFC5410061ECD5 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AFBBB2B26CFC59E0061ECD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AFBBB4426CFD80B0061ECD5 /* main.swift in Sources */,
+				9AFBBB3226CFC59E0061ECD5 /* TestCLIAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +326,42 @@
 			};
 			name = Release;
 		};
+		9AFBBB3526CFC59E0061ECD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 33SL2CXQ99;
+				INFOPLIST_FILE = TestCLIAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rickthedev.TestCLIAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9AFBBB3626CFC59E0061ECD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 33SL2CXQ99;
+				INFOPLIST_FILE = TestCLIAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rickthedev.TestCLIAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -280,6 +379,15 @@
 			buildConfigurations = (
 				9AFBBB2926CFC5410061ECD5 /* Debug */,
 				9AFBBB2A26CFC5410061ECD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AFBBB3426CFC59E0061ECD5 /* Build configuration list for PBXNativeTarget "TestCLIAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AFBBB3526CFC59E0061ECD5 /* Debug */,
+				9AFBBB3626CFC59E0061ECD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
