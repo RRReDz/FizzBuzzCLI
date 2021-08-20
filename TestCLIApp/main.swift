@@ -7,5 +7,26 @@
 
 import Foundation
 
-print("Hello, World!")
+class TestCLIApp {
+    private let runnable: Runnable
+    
+    init(runnable: Runnable) {
+        self.runnable = runnable
+    }
+    
+    func start() {
+        runnable.run()
+    }
+}
+
+protocol Runnable {
+    func run()
+}
+
+private final class NullRunnable: Runnable {
+    func run() {}
+}
+
+let main = TestCLIApp(runnable: NullRunnable())
+main.start()
 

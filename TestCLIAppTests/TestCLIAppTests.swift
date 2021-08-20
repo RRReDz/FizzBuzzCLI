@@ -8,22 +8,6 @@
 import XCTest
 import TestCLIApp
 
-class TestCLIApp {
-    private let runnable: Runnable
-    
-    init(runnable: Runnable) {
-        self.runnable = runnable
-    }
-    
-    func start() {
-        runnable.run()
-    }
-}
-
-protocol Runnable {
-    func run()
-}
-
 class TestCLIAppTests: XCTestCase {
 
     func test_init_doesNotCallRunnableRunCommand() {
