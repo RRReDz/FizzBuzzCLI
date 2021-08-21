@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FizzBuzzParser
 
 let zeroToOneUndredNumbers = Array(1...100)
 let printerCompletion = { (stringResults: [String]) in
@@ -14,7 +15,7 @@ let printerCompletion = { (stringResults: [String]) in
     }
 }
 
-let fizzBuzz = FizzBuzzStringsMaker(
+let fizzBuzz = FizzBuzzParser(
     numbers: zeroToOneUndredNumbers,
     completion: printerCompletion)
 

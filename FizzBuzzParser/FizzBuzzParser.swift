@@ -1,5 +1,5 @@
 //
-//  FizzBuzzStringsMaker.swift
+//  FizzBuzzParser.swift
 //  TestCLIApp
 //
 //  Created by Riccardo Rossi on 20/08/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class FizzBuzzStringsMaker {
+public class FizzBuzzParser {
     private let completion: ([String]) -> Void
     private let numbers: [Int]
     
